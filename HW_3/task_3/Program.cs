@@ -11,4 +11,5 @@ int[] GetCubesSequence(int num) {
 
 Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine());
-for (int i = 0; i < number; i++) Console.Write($"{GetCubesSequence(number)[i]} ");
+int [] cubesList = GetCubesSequence(number);
+for (int i = 0; i < number; i++) Console.Write($"{cubesList[i]} ");
