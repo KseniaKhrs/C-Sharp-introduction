@@ -1,10 +1,10 @@
 ﻿// Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 
-int GetRange (int[] array)
+double GetRange (double[] array)
 {
-    int minNum = array[0];
-    int maxNum = array[0];
+    double minNum = array[0];
+    double maxNum = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > maxNum)
@@ -16,10 +16,10 @@ int GetRange (int[] array)
             minNum = array[i];
         }
     }
-    int range = maxNum - minNum;
+    double range = maxNum - minNum;
     return range;
 }
 
-int [] array = {300, 50, 24, -6, 78};
+double [] array = {300.7, 50.5, 24, -6.5, 78};
 var rangeArray = GetRange(array);
 Console.WriteLine ($"Разница максимального и минимального значений равна {rangeArray}");
