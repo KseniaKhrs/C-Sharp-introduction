@@ -34,10 +34,21 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 int [,] array = GetArray (m, n, -1000, 1000);
 
-Console.WriteLine ("Введите номер строки нужного элемента массива: ");
+Console.WriteLine("Сгенирирован следующий массив: ");
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        Console.Write(array[i,j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+
+Console.WriteLine ("Введите индекс строки нужного элемента массива: ");
 int index1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine ("Введите номер столбца нужного элемента массива: ");
+Console.WriteLine ("Введите индекс столбца нужного элемента массива: ");
 int index2 = Convert.ToInt32(Console.ReadLine());
 
 var result = GerArrayElement(array, index1, index2);

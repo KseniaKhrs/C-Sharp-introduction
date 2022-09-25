@@ -35,5 +35,18 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 int[,] array = GetArray (m, n, 0, 10);
 
+Console.WriteLine("Сгенирирован следующий массив: ");
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        Console.Write(array[i,j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+
 double[] result = GetMeanColumn(array);
+
+Console.WriteLine("Средние арифметические каждого столбца: ");
 for (int i = 0; i < result.Length; i++) Console.Write($"{result[i]}; ");

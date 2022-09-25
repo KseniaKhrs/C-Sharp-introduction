@@ -16,12 +16,19 @@ double[,] GetArray (int m, int n, int min, int max)
     }
     return resultArray;
 }
-int m = 3;
-int n = 4;
+
+Console.WriteLine ("Введите число строк в массиве: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine ("Введите число столбцов в массиве: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
 int min = -1000;
 int max = 1000;
 
 double[,] array = GetArray(m, n, min, max);
+
+Console.WriteLine("Сгенирирован следующий массив: ");
 for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
