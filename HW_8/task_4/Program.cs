@@ -43,8 +43,10 @@ int numY = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine ("Введите измерение z матрицы: ");
 int numZ = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine ("Введите максимальное число в матрице (не меньше чем x*y*z): ");
+int numMax = Convert.ToInt32(Console.ReadLine());
 
-int[,,] array = GetArray (numX, numZ, numY, 0, 28);
+int[,,] array = GetArray (numX, numZ, numY, 0, numMax+1);
 
 
 Console.WriteLine("Сгенирирована следующая матрица: ");

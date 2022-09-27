@@ -39,17 +39,16 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine ("Введите число столбцов в массиве: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine ("Введите первое число в спиральном массиве: ");
-int minNum = Convert.ToInt32(Console.ReadLine());
 
-int[,] array = GetSpiralArray (m, n, minNum);
+int[,] array = GetSpiralArray (m, n, 1);
 
 Console.WriteLine("Сгенирирована следующая матрица: ");
 for (int x = 0; x < array.GetLength(0); x++)
 {
     for (int y = 0; y < array.GetLength(1); y++)
     {
-        Console.Write(array[x,y] + " ");
+        if (array[x,y] < 10) Console.Write(" " + array[x,y] + " ");
+        else Console.Write(array[x,y] + " ");
     }
     Console.WriteLine();
 }
